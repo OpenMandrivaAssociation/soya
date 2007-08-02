@@ -1,14 +1,14 @@
 %define	name	soya
 %define	oname	Soya
-%define	version	0.13
+%define	version	0.13.2
 %define	tutver	0.13
-%define	rel	2
+%define	rel	1
 %define	release	%mkrel %{rel}
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-License:	GPL
+License:	GPLv2
 Url:		http://home.gna.org/oomadness/en/index.html
 Source0:	http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
 Source1:	http://download.gna.org/soya/%{oname}Tutorial-%{tutver}.tar.bz2
@@ -58,11 +58,9 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README CHANGES AUTHORS
 %{_bindir}/%{name}_editor
-%{_libdir}/python%{pyver}/site-packages/%{name}
+%py_platsitedir/%{name}
 %py_platsitedir/*.egg-info
 
 %files tutorial
 %defattr(644,root,root,0755)
 %doc %{oname}Tutorial-%{tutver}/AUTHORS %{oname}Tutorial-%{tutver}/tutorial
-
-
