@@ -14,7 +14,6 @@ Source0:	http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
 Source1:	http://download.gna.org/soya/%{oname}Tutorial-%{tutver}.tar.bz2
 #(peroyvind): do NOT blindly remove this path without ensuring that same behaviour is kept!
 #Patch0:		soya-0.12-use-system-ode.patch
-Patch1:		soya-0.13-ulong_ptr.patch
 Group:		Development/Python
 Summary:	A practical high-level object-oriented 3D engine
 BuildRequires:	python-devel png-devel SDL-devel cal3d-devel mesaglu-devel
@@ -39,7 +38,6 @@ Soya is a practical high-level object-oriented 3D engine for Python.
 %prep
 %setup -q -n %{oname}-%{version} -a 1
 #%patch0 -p1 -b .ode
-%patch1 -p1 -b .ulong_ptr
 rm -rf `find -name CVS` `find -name .cvswrappers`
 
 %build
