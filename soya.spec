@@ -19,6 +19,7 @@ Summary:	A practical high-level object-oriented 3D engine
 BuildRequires:	python-devel png-devel SDL-devel cal3d-devel mesaglu-devel
 BuildRequires:	ode-devel glew-devel freetype2-devel openal-devel
 Requires:	editobj
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 A practical high-level object-oriented 3D engine.
