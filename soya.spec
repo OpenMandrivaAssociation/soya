@@ -2,7 +2,7 @@
 %define	oname	Soya
 %define	version	0.14
 %define	tutver	0.14
-%define	rel	1
+%define	rel	2
 %define	release	%mkrel %{rel}
 
 Name:		%{name}
