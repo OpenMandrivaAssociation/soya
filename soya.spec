@@ -2,7 +2,7 @@
 %define	oname	Soya
 %define	version	0.14
 %define	tutver	0.14
-%define	rel	2
+%define	rel	3
 %define	release	%mkrel %{rel}
 
 Name:		%{name}
@@ -28,6 +28,7 @@ Summary:	Tutorial for the Soya 3D engine
 License:	GPLv2+
 Group:		Development/Python
 Requires:	%{name} >= %{version}
+Suggests:	blender python-imaging cerealizer
 
 %description	tutorial
 This is a set of tutorial for Soya.
