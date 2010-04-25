@@ -2,7 +2,7 @@
 %define	oname	Soya
 %define	version	0.14
 %define	tutver	0.14
-%define	rel	3
+%define	rel	4
 %define	release	%mkrel %{rel}
 
 Name:		%{name}
@@ -16,7 +16,7 @@ Group:		Development/Python
 Summary:	A practical high-level object-oriented 3D engine
 BuildRequires:	python-devel png-devel SDL-devel cal3d-devel mesaglu-devel
 BuildRequires:	ode-devel glew-devel freetype2-devel openal-devel
-Requires:	editobj
+Requires:	editobj2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
