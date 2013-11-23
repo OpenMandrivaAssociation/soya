@@ -13,7 +13,7 @@ Source1:	http://download.gna.org/soya/%{oname}Tutorial-%{tutver}.tar.bz2
 Patch0:		soya-0.14-glu.patch
 BuildRequires:	python-devel
 BuildRequires:	pkgconfig(libpng)
-BuildRequires:	SDL-devel
+BuildRequires:	pkgconfig(sdl)
 BuildRequires:	cal3d-devel
 BuildRequires:	mesaglu-devel
 BuildRequires:	ode-devel
