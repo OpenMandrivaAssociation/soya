@@ -15,7 +15,7 @@ BuildRequires:	python-devel
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(sdl)
 BuildRequires:	cal3d-devel
-BuildRequires:	mesaglu-devel
+BuildRequires:	pkgconfig(glu)
 BuildRequires:	ode-devel
 BuildRequires:	glew-devel
 BuildRequires:	pkgconfig(freetype2)
