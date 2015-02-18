@@ -11,7 +11,8 @@ Url:		http://home.gna.org/oomadness/en/index.html
 Source0:	http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
 Source1:	http://download.gna.org/soya/%{oname}Tutorial-%{tutver}.tar.bz2
 Patch0:		soya-0.14-glu.patch
-BuildRequires:	python-devel
+# Python 3 does not support string exceptions
+BuildRequires:	python2-devel
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(sdl)
 BuildRequires:	cal3d-devel
@@ -42,20 +43,21 @@ Soya is a practical high-level object-oriented 3D engine for Python.
 %patch0 -p0
 
 rm -rf `find -name CVS` `find -name .cvswrappers`
-find . -name "*.py" |xargs 2to3 -w
-
 
 %build
-python setup.py build 
+ln -s %{_bindir}/python2 python
+export PATH=`pwd`:$PATH
+
+python2 setup.py build 
 
 %install
-python setup.py install --root=%{buildroot}
+python2 setup.py install --root=%{buildroot}
 
 %files
 %doc README CHANGES AUTHORS
 %{_bindir}/%{name}_editor
-%{py_platsitedir}/%{name}
-%{py_platsitedir}/*.egg-info
+%{py2_platsitedir}/%{name}
+%{py2_platsitedir}/*.egg-info
 
 %files tutorial
 %doc %{oname}Tutorial-%{tutver}/AUTHORS %{oname}Tutorial-%{tutver}/tutorial
