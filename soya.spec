@@ -4,7 +4,7 @@
 Summary:	A practical high-level object-oriented 3D engine
 Name:		soya
 Version:	0.14
-Release:	8
+Release:	9
 License:	GPLv2+
 Group:		Development/Python
 Url:		http://home.gna.org/oomadness/en/index.html
