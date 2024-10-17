@@ -7,7 +7,7 @@ Version:	0.14
 Release:	9
 License:	GPLv2+
 Group:		Development/Python
-Url:		http://home.gna.org/oomadness/en/index.html
+Url:		https://home.gna.org/oomadness/en/index.html
 Source0:	http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
 Source1:	http://download.gna.org/soya/%{oname}Tutorial-%{tutver}.tar.bz2
 Patch0:		soya-0.14-glu.patch
